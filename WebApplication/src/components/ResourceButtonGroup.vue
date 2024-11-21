@@ -546,7 +546,7 @@ export default {
             return api.getBulkDownloadDicomDirUrl(this.resourcesOrthancId);
         },
         downloadZipUrl() {
-            return api.getDownloadZipUrl(this.resourceLevel, this.resourceOrthancId);
+            return api.getDownloadZipUrl(this.resourceLevel, this.resourceOrthancId,this.patientMainDicomTags.PatientID);
         },
         downloadDicomDirUrl() {
             return api.getDownloadDicomDirUrl(this.resourceLevel, this.resourceOrthancId);

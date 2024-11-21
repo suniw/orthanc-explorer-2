@@ -555,8 +555,8 @@ export default {
     getInstanceDownloadUrl(orthancId) {
         return orthancApiUrl + "instances/" + orthancId + "/file";
     },
-    getDownloadZipUrl(level, resourceOrthancId) {
-        return orthancApiUrl + this.pluralizeResourceLevel(level) + '/' + resourceOrthancId + '/archive';
+    getDownloadZipUrl(level, resourceOrthancId, patientID) {
+        return orthancApiUrl + this.pluralizeResourceLevel(level) + '/' + resourceOrthancId + '/archive?filename='+ patientID;
     },
     getBulkDownloadZipUrl(resourcesOrthancId) {
         if (resourcesOrthancId.length > 0)
